@@ -22,7 +22,7 @@ window.onload = function() {
    // Create some 3d objects
    var textureLoader = new THREE.TextureLoader();
     
-//Love    
+//Love the center sphere
     
    var sunTexture = textureLoader.load('images/equal.png'); 
    var sunGeometry = new THREE.SphereGeometry(3.5, 20, 20);
@@ -33,7 +33,7 @@ window.onload = function() {
    sun = new THREE.Mesh(sunGeometry, sunMaterial);
    scene.add(sun);
    
-//Victim1   
+//Victim1 
    var earthTexture = textureLoader.load('images/article2.jpg');
    var earthGeometry = new THREE.SphereGeometry(3, 20, 20);
    var earthMaterial = new THREE.MeshStandardMaterial({
@@ -138,7 +138,7 @@ window.onload = function() {
 
     
        
-// Create lights
+// Create lights 
    var ambient = new THREE.AmbientLight(0x444444);
    scene.add(ambient);
    
@@ -150,12 +150,12 @@ window.onload = function() {
    requestAnimationFrame(animate);
 };
 
-
+//addEventListener with clicking 
 document.addEventListener('mousedown', function(event) {
    camera.rotation.x = 0.5 * ((event.offsetY / window.innerHeight) * 2 - 1);
 });
 
-
+//The speed of spinning and direction
 function animate() {
    sun.rotation.y += 0.009;
    earth.rotation.y += 0.01;
